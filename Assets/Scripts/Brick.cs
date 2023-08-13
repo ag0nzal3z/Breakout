@@ -7,6 +7,7 @@ public class Brick : MonoBehaviour
 
     //GameObject gameManagerObj;
     GameManager gameManager;
+    [SerializeField] GameObject explosionPrefab;
 
     void Start()
     {
@@ -32,6 +33,8 @@ public class Brick : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
         if(gameManager != null) {
             gameManager.BricksOnLevel--;
         }
