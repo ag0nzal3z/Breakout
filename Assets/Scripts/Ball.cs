@@ -10,7 +10,8 @@ public class Ball : MonoBehaviour
     Vector2 currentVelocity;
     [SerializeField] float speed = 3;
     GameManager gameManager;
-
+    // Variables efectos sonido
+    [SerializeField] AudioClip paddleBounce;
     void Start()
     {
         //rigidbody2d = GetComponent<Rigidbody2D>();
@@ -31,6 +32,10 @@ public class Ball : MonoBehaviour
             if (gameManager != null) {
                 gameManager.PlayerLives--;
             }
+        }
+
+        if (collision.transform.CompareTag("Player")) {
+            FindObjectOfType<AudioController>().PlatSfx(paddleBounce);
         }
     }
 
