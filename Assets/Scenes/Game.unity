@@ -5487,6 +5487,8 @@ MonoBehaviour:
   rigidbody2d: {fileID: 1599537073}
   speed: 3
   paddleBounce: {fileID: 8300000, guid: 37ebc7f2c88090e42917d5f0511793c2, type: 3}
+  bounce: {fileID: 8300000, guid: 5c35c677fb1b1c54ba3e4a1fd8e25837, type: 3}
+  loseLife: {fileID: 8300000, guid: cf6a51e9b6e16754b96fc5d5f332bed6, type: 3}
 --- !u!1 &1600959228
 GameObject:
   m_ObjectHideFlags: 0
@@ -7456,6 +7458,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4868871419099381594, guid: f34049fd21c6a2b49b124bca30804ccd, type: 3}
+      propertyPath: explosionSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: ab690a02e1d699f49bcd3fccb80771ef, type: 3}
     - target: {fileID: 5521429574154564593, guid: f34049fd21c6a2b49b124bca30804ccd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 195.03859

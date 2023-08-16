@@ -12,6 +12,8 @@ public class Ball : MonoBehaviour
     GameManager gameManager;
     // Variables efectos sonido
     [SerializeField] AudioClip paddleBounce;
+    [SerializeField] AudioClip bounce;
+    [SerializeField] AudioClip loseLife;
     void Start()
     {
         //rigidbody2d = GetComponent<Rigidbody2D>();
@@ -28,14 +30,18 @@ public class Ball : MonoBehaviour
         rigidbody2d.velocity = moveDirection;
 
         if (collision.transform.CompareTag("DeathLimit")) {
-            Debug.Log("Colision con el limite bajo");
+            FindObjectOfType<AudioController>().PlaySfx(loseLife);
             if (gameManager != null) {
                 gameManager.PlayerLives--;
             }
         }
 
         if (collision.transform.CompareTag("Player")) {
-            FindObjectOfType<AudioController>().PlatSfx(paddleBounce);
+            FindObjectOfType<AudioController>().PlaySfx(paddleBounce);
+        }
+
+        if (collision.transform.CompareTag("Brick")) {
+            FindObjectOfType<AudioController>().PlaySfx(bounce);
         }
     }
 

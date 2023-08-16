@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject winnerPanel;
     [SerializeField] GameObject[] livesImg;
     [SerializeField] Text gameTimeText;
+    [SerializeField] AudioClip buttonPress;
 
     public void ActivateLosePanel() { 
         losePanel.SetActive(true);
@@ -21,10 +22,12 @@ public class UIController : MonoBehaviour
     }
 
     public void RestartCurrentScene() {
+        FindObjectOfType<AudioController>().PlaySfx(buttonPress);
         SceneManager.LoadScene("Game");
     }
 
     public void GoToMainMenu() {
+        FindObjectOfType<AudioController>().PlaySfx(buttonPress);
         SceneManager.LoadScene("MainMenu");
     }
         
