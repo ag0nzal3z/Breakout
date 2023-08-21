@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
     [SerializeField] AudioClip paddleBounce;
     [SerializeField] AudioClip bounce;
     [SerializeField] AudioClip loseLife;
+    [SerializeField] float yMinSpeed = 2;
     void Start()
     {
         //rigidbody2d = GetComponent<Rigidbody2D>();
@@ -42,6 +43,13 @@ public class Ball : MonoBehaviour
 
         if (collision.transform.CompareTag("Brick")) {
             FindObjectOfType<AudioController>().PlaySfx(bounce);
+        }
+
+        if (gameManager.BallOnPlay) { 
+            if (Mathf.Abs(moveDirection.y) < yMinSpeed) { 
+                moveDirection.y = yMinSpeed * Mathf.Sign(moveDirection.y);
+            }
+        
         }
     }
 
