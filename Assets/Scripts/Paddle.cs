@@ -48,7 +48,10 @@ public class Paddle : MonoBehaviour
             }
         }
 
-
+        if (Input.GetKey(KeyCode.Escape)) {
+            //Debug.Log("Salimos del juego");
+            Application.Quit();
+        }
 
     }
 }
