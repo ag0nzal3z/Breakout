@@ -36,7 +36,7 @@ public class Paddle : MonoBehaviour
             transform.position += Time.deltaTime * Vector3.left * speed;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space))
         {
             if (gameManager.BallOnPlay == false)
             {
