@@ -1,3 +1,12 @@
+[V0.2.3 (2023-08-28)]
+
+* Agregado el nivel 2
+* Agregado el nivel 3
+
+[V0.2.2 (2023-08-25)]
+
+* Agregado el boton salir en el menu principal
+
 [V0.2.1 (2023-08-23)]
 
 * Lanzar bola pulsando barra espaciadora
