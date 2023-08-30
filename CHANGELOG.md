@@ -1,4 +1,4 @@
-[V0.2.3 (2023-08-28)]
+[V0.2.5 (2023-08-28)]
 
 * Agregado el nivel 2
 * Agregado el nivel 3
