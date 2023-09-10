@@ -1,3 +1,7 @@
+[V0.2.6 (2023-09-10)]
+
+* Agregado el menu de pausa al juego
+
 [V0.2.5 (2023-08-28)]
 
 * Agregado el nivel 2

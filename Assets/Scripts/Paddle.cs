@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Paddle : MonoBehaviour
 {
@@ -50,7 +51,12 @@ public class Paddle : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Escape)) {
             //Debug.Log("Salimos del juego");
-            Application.Quit();
+            //Application.Quit();
+            //Time.timeScale = 0f;
+            FindObjectOfType<UIController>().PauseMenu();
+
+
+
         }
 
     }
